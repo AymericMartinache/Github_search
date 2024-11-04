@@ -97,7 +97,7 @@ function App() {
     setInputSearchValue(newValue);
   };
 
-  // allere à la page suivante
+  // aller à la page suivante
   const gotToNextPage = () => {
     setIsLoading(true);
     setPage(page + 1);
