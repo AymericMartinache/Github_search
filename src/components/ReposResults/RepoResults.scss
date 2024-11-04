@@ -1,0 +1,51 @@
+@use '../../styles/variables' as v;
+
+.card-group-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.card-item {
+  padding: 0px !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  transition: box-shadow 0.3s ease-in !important;
+  height: 500px;
+
+  &-img {
+    width: 100% !important;
+    border-radius: 10px !important;
+  }
+
+  &-name {
+    font-size: 1.5rem !important;
+    text-align: center !important;
+    margin-bottom: 10px;
+    color: v.$color-primary !important;
+  }
+
+  &-repo {
+    font-size: 1.3rem !important;
+  }
+
+  &-description {
+    font-size: 1.1rem !important;
+  }
+
+  &:hover {
+    box-shadow: 3px 3px 15px v.$color-primary !important;
+  }
+}
+
+.divider {
+  border: 1px solid v.$color-primary;
+}
+
+@media (max-width: 768px) {
+  .card-group-container {
+    grid-template-columns: 1fr;
+  }
+}
